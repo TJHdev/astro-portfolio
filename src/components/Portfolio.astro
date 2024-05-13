@@ -1,0 +1,68 @@
+---
+const portfolioData = [
+  {
+    // image: smartbrain,
+    link: "https://tjhdev.github.io/TJHdev-AN-Web-Dev-2018-SmartBrain/",
+    title: "SmartBrain",
+    text: "App that detects faces on any image provided. React frontend. NodeJS and PostgreSQL backend.",
+  },
+
+  {
+    // image: quotegen,
+    link: "https://codepen.io/devbeatz/full/MGayde/",
+    title: "QuoteGen",
+    text: "A Donald Trump quote generator.",
+  },
+  {
+    // image: chatapp,
+    link: "https://websock-chat-app.herokuapp.com/",
+    title: "ChatApp",
+    text: "Real time WebSocket chat app built on NodeJS backend.",
+  },
+  {
+    // image: weatherapp,
+    link: "https://codepen.io/devbeatz/full/rvOvRE/",
+    title: "WeatherApp",
+    text: "Front end for a weather API, displaying the next 24 hours at your location.",
+  },
+  {
+    // image: expensify,
+    link: "https://react-course-2-expensify-th.herokuapp.com/dashboard",
+    title: "Expensify",
+    text: "Expense tracking application. React front end with Firebase backend.",
+  },
+  {
+    // image: blogapp,
+    link: "https://github.com/TJHdev/AM-React-BlogApp",
+    title: "BlogApp",
+    text: "Blog site, built with a React front end with Firebase backend.",
+  },
+  {
+    // image: wikiapi,
+    link: "https://codepen.io/devbeatz/full/zjrRXB/",
+    title: "WikiApi",
+    text: "A styled front end for the Wikipedia search API.",
+  },
+  {
+    // image: eiredeals,
+    link: "https://github.com/TJHdev/deals-ie",
+    title: "Éire Deals",
+    text: "Deals website for Ireland. Fullstack application built using React, Express, PostgreSQL and NodeJS",
+  },
+];
+---
+
+<div
+  class="bg-opacity-80 bg-black text-white p-4 mx-auto max-w-1000px mt-40 md:mt-10 grid grid-rows-2 grid-cols-4 grid-rows-auto md:grid-rows-4 md:grid-cols-2 sm:grid-rows-8 sm:grid-cols-1 gap-4 items-center justify-items-center"
+>
+  <div class="row center">
+    <h2 class="text-2xl font-bold">Portfolio</h2>
+  </div>
+
+  {
+    portfolioData.map((portfoliodata) => (
+      // <PortfolioCard {...portfoliodata} key={portfoliodata.title} />
+      <div>meh</div>
+    ))
+  }
+</div>

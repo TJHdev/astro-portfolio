@@ -1,38 +1,17 @@
 ---
+import HorizontalRule from "../components/HorizontalRule.astro";
 interface Props {
-  // title: string;
-  // body: string;
+  title: string;
 }
 
-// const { title, body } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <div
-  class="flex justify-center w-screen max-w-full z-15 fixed bg-opacity-90 bg-gray-900 mb-14.5"
+  class="inline-block bg-opacity-80 bg-black text-white text-lg p-2 mx-auto border-3 border-white"
 >
-  <img class="h-4 m-2" />
-  <div
-    class="gap-3 flex justify-center items-center flex-wrap max-w-screen-md p-4"
-  >
-    <button
-      class="w-20 z-15 font-semibold text-base bg-black text-white border border-white px-2 py-1.5 uppercase transition-transform transform-gpu hover:text-black hover:bg-white active:bg-white active:text-black active:translate-y-2 focus:outline-none"
-    >
-      About me</button
-    >
-    <button
-      class="w-20 z-15 font-semibold text-base bg-black text-white border border-white px-2 py-1.5 uppercase transition-transform transform-gpu hover:text-black hover:bg-white active:bg-white active:text-black active:translate-y-2 focus:outline-none"
-      >Skills</button
-    >
-    <button
-      class="w-20 z-15 font-semibold text-base bg-black text-white border border-white px-2 py-1.5 uppercase transition-transform transform-gpu hover:text-black hover:bg-white active:bg-white active:text-black active:translate-y-2 focus:outline-none"
-    >
-      Portfolio</button
-    >
-    <button
-      class="w-20 z-15 font-semibold text-base bg-black text-white border border-white px-2 py-1.5 uppercase transition-transform transform-gpu hover:text-black hover:bg-white active:bg-white active:text-black active:translate-y-2 focus:outline-none"
-      >Experience</button
-    >
-  </div>
+  <h1 class="uppercase text-white">{title}</h1>
+  <HorizontalRule />
 </div>
 
 <style></style>
