@@ -2,11 +2,19 @@
 import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav.astro";
 import AboutMe from "../components/AboutMe.astro";
+import Image from "astro/components/Image.astro";
+import BackgroundImage from "../images/background-inside-garage.jpg";
 ---
 
 <Layout title="TJH dev">
   <main>
     <Nav />
+    <Image
+      loading="eager"
+      class="blur absolute top-0 left-0 -z-1 w-screen h-screen object-cover bg-center bg-no-repeat bg-cover bg-fixed filter"
+      src={BackgroundImage}
+      alt="leadership"
+    />
     <AboutMe />
   </main>
 </Layout>

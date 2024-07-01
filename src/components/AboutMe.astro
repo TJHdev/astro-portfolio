@@ -1,4 +1,6 @@
 ---
+import Header from "./Header.astro";
+
 interface Props {
   // title: string;
   // body: string;
@@ -8,10 +10,11 @@ interface Props {
 ---
 
 <div
-  class="text-white mx-2 z-10 bg-opacity-86 bg-black p-10 max-w-1140px m-auto"
+  class="text-white mx-2 z-1 bg-opacity-86 bg-black p-10 max-w-1140px m-auto"
 >
   <div class="text-center mb-10">
-    <h2 class="text-2xl font-bold">About Me</h2>
+    <!-- <h2 class="text-2xl font-bold">About Me</h2> -->
+    <Header title="About me" />
   </div>
   <div class="flex justify-center mb-2">
     <div class="flex justify-center">
