@@ -1,0 +1,167 @@
+---
+import { Icon } from "astro-icon/components";
+import Header from "./Header.astro";
+
+interface Props {
+  // title: string;
+  // body: string;
+}
+
+const skillsData = [
+  {
+    iconPath: "javascript",
+    skillsTitle: "JavaScript",
+    skillsText:
+      "A programming language made prolific through the use in the browser. It is now seen as the language of the web.",
+  },
+  {
+    iconPath: "typescript",
+    skillsTitle: "TypeScript",
+    skillsText:
+      "A statically typed superset of JavaScript that compiles to plain JavaScript. Can't live without it!",
+  },
+  {
+    iconPath: "es6",
+    skillsTitle: "ECMA Script 6",
+    skillsText:
+      "Released in 2015, ES6 brought a major update to the JavaScript language adding many new features.",
+  },
+  {
+    iconPath: "html5",
+    skillsTitle: "HTML 5",
+    skillsText: "HTML 5 is the mark-up language for the browser.",
+  },
+  {
+    iconPath: "css3",
+    skillsTitle: "CSS 3",
+    skillsText:
+      "Cascading Style Sheets 3, is the latest version of the language used to add visual spice to a website.",
+  },
+  {
+    iconPath: "tailwind",
+    skillsTitle: "Tailwind CSS",
+    skillsText:
+      "Tailwind CSS is a highly customizable, utility-first CSS framework that revolutionizes styling by providing low-level utility classes for fast and responsive design.",
+  },
+  {
+    iconPath: "sass",
+    skillsTitle: "Sass",
+    skillsText: "Sass is a widely-used extension language for CSS.",
+  },
+  {
+    iconPath: "nodejs",
+    skillsTitle: "NodeJS",
+    skillsText:
+      "Allows the use of JavaScript to write server side code. Built on top of Chrome's JavaScript V8 runtime engine.",
+  },
+  {
+    iconPath: "npm",
+    skillsTitle: "Node Package Manager",
+    skillsText:
+      " NPM is both a command line interface and the world's largest software registry with approximately 3 billion downloads per week.",
+  },
+  {
+    iconPath: "react",
+    skillsTitle: "React",
+    skillsText:
+      "React is a view library built by Facebook, released in 2013. It aims to enable complex & dynamic websites to be built using re-usable components.",
+  },
+  {
+    iconPath: "redux",
+    skillsTitle: "Redux",
+    skillsText:
+      "Redux is a JS library for state management. It is commonly used in conjunction with React or Angular.",
+  },
+  {
+    iconPath: "git",
+    skillsTitle: "GIT",
+    skillsText:
+      "GIT is the go-to version control software. Allowing teams to collaborate and keep track of changes in complex projects.",
+  },
+  {
+    iconPath: "github",
+    skillsTitle: "Github",
+    skillsText:
+      "Github is the most popular remote repository on the web. This allows the remote use of GIT in a seamless fashion.",
+  },
+  {
+    iconPath: "jest",
+    skillsTitle: "Jest",
+    skillsText:
+      "Is a testing library developed by Facebook aimed at enabling efficient testing of the React and React Native applications.",
+  },
+  {
+    iconPath: "mocha",
+    skillsTitle: "Mocha",
+    skillsText:
+      "Is another popular testing framework for both NodeJS and the browser",
+  },
+  {
+    iconPath: "postman",
+    skillsTitle: "Postman",
+    skillsText:
+      "Is a program / chrome extension for testing RESTful APIs. Postman makes it easy to to test, develop and document APIs through HTTP requests.",
+  },
+  {
+    iconPath: "webpack",
+    skillsTitle: "Webpack",
+    skillsText:
+      "Webpack is a module bundler which simplifies the build process for web applications.",
+  },
+  {
+    iconPath: "heroku",
+    skillsTitle: "Heroku",
+    skillsText:
+      "Is a popular cloud platform that enables building, delivery, monitoring and scaling of applications.",
+  },
+  {
+    iconPath: "firebase",
+    skillsTitle: "Firebase",
+    skillsText:
+      "Is a cloud backend as a service platform by Google. It seemlessly intergrates NoSQL database, authentication and server hosting.",
+  },
+  {
+    iconPath: "mongodb",
+    skillsTitle: "MongoDB",
+    skillsText:
+      "Is a popular open-source NoSQL database. It stores data in JSON-like documents.",
+  },
+];
+---
+
+<>
+  <div class="text-center mb-10 pt-20">
+    <!-- <h2 class="text-2xl font-bold">About Me</h2> -->
+    <Header title="Skills" />
+    <div
+      class="relative w-[1000px] my-[30px] mx-auto bg-black/80 grid grid-rows-2 grid-cols-9 gap-[5px] auto-rows-[80px] auto-flow-row auto-cols-[.5fr] items-center justify-items-center
+    md:grid-rows-3 md:grid-cols-6 md:w-[600px] md:my-[50px] md:mx-auto md:p-[25px]
+    sm:grid-rows-6 sm:grid-cols-3 sm:w-[300px] sm:my-[50px] sm:mx-auto sm:p-[30px]
+    xs:p-[5px]"
+    >
+      {
+        skillsData.map((skill) => {
+          return (
+            <div class="group relative">
+              {/* <img
+                alt="icon"
+                class="z-20 w-[80px] text-white mb-4 p-4 rounded-[3px] transition-all duration-300 group-hover:scale-200"
+              /> */}
+              <Icon
+                name={skill.iconPath}
+                size={80}
+                class="z-20 w-[80px] text-white mb-4 p-4 rounded-[3px] transition-all duration-300 group-hover:scale-200"
+              />
+              <div class="z-[-2] text-[1.1rem] relative bg-transparent text-transparent transition-all duration-500 scale-[0.001] group-hover:z-10 group-hover:scale-100 group-hover:text-white">
+                <div class="z-10 absolute top-[15px] left-[-70px] bg-black/90 p-2.5 w-[220px] xs:text-[1rem] xs:w-[140px] xs:left-[-30px] xs:top-[30px]">
+                  <h1 class="text-center font-semibold">{skill.skillsTitle}</h1>
+                  <p class="text-[0.9rem]">{skill.skillsText}</p>
+                </div>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</>

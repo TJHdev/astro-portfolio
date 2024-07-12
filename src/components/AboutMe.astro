@@ -1,5 +1,6 @@
 ---
 import Header from "./Header.astro";
+import ProfilePhoto from "@src/images/profile-photo.jpg";
 
 interface Props {
   // title: string;
@@ -9,39 +10,32 @@ interface Props {
 // const { title, body } = Astro.props;
 ---
 
-<div
-  class="text-white mx-2 z-1 bg-opacity-86 bg-black p-10 max-w-1140px m-auto"
->
-  <div class="text-center mb-10">
+<>
+  <div class="text-center mb-10 pt-20">
     <!-- <h2 class="text-2xl font-bold">About Me</h2> -->
     <Header title="About me" />
   </div>
   <div class="flex justify-center mb-2">
     <div class="flex justify-center">
-      <div class="border-3 border-white">
-        <img src={""} alt="Profile Photo" class="max-w-[180px] w-2/5" />
+      <div class="border-solid border-white border-2">
+        <img src={ProfilePhoto.src} alt="Profile Photo" class="max-w-[180px]" />
       </div>
     </div>
   </div>
-  <div class="text-1.5xl">
-    I am a Junior Full-Stack Web Developer with a focus on React and Node. I
-    gained an in-depth understanding of JavaScript to enable proficiency in
-    React for frontend and Node for backend development. I self-taught a vast
-    array of other tools and technologies when they have been required.
-    Highlights include: PostgreSQL for storing and retrieving relational data,
-    Docker for easily deploying to cloud providers, Postman for testing APIs
-    created using Node and ExpressJS.
-    <br />
-    <br />
-     After 8 years in Mechanical Engineering I have decided to finally make the
-    jump into software. I have always been extremely passionate about technology
-    and this career move reflects my desire to be involved in the cutting edge
-    of business, technology and the web.
-    <br />
-    <br />
-     From May 2018, I left my job as a Mechanical Design Engineer to retrain
-    full time as a web developer. I have used online courses and project-based
-    learning as the main vehicle for improving my skill set. I also frequently
-    attend programming meet-ups such as LeedsJS and CodeUp.
+  <div
+    class="text-white mx-2 z-1 bg-opacity-86 bg-black p-5 max-w-1140px m-auto"
+  >
+    <div class="text-1.5xl">
+      Frontend specalist with 6 years of experience crafting responsive and
+      intuitive user interfaces. Proficient in HTML, CSS and Typescript, with
+      expertise in modern frameworks like React and Astro. Experienced in
+      end-to-end testing using Playwright, enhancing application reliability and
+      user experience across different browsers and devices.
+      <br />
+      <br />
+       I self taught web development starting in May 2018, and started my first
+      software role in March 2019. I have experience working across the full
+      stack but my passion lies in doing frontend development and doing it well.
+    </div>
   </div>
-</div>
+</>
