@@ -137,11 +137,15 @@ const skillsData = [
                 alt="icon"
                 class="z-20 w-[80px] text-white mb-4 p-4 rounded-[3px] transition-all duration-300 group-hover:scale-200"
               /> */}
-              <div class="z-[20] text-white mb-4 p-4 rounded-[3px] duration-300 group-hover:z-[20] group-hover:scale-[1.95] transition-all">
-                <Icon name={skill.iconPath} size={60} />
+              <div>
+                <Icon
+                  name={skill.iconPath}
+                  size={60}
+                  class="z-[20] text-white m-4 mb-4 rounded-[3px] duration-300 group-hover:scale-[1.95] transition-all"
+                />
               </div>
-              <div class="z-[2] text-[1.1rem] relative bg-transparent text-transparent transition-all duration-500 scale-[0.00001] group-hover:scale-100 group-hover:text-white">
-                <div class="z-[2] absolute top-[15px] left-[-50px] bg-black/90 p-2.5 w-[220px] xs:text-[1rem] xs:w-[140px] xs:left-[-30px] xs:top-[30px]">
+              <div class="z-[2] text-[1.1rem] relative bg-transparent text-transparent transition-all duration-500 scale-[0.00001] group-hover:z-[20] group-hover:scale-100 group-hover:text-white">
+                <div class="z-[2] absolute top-[15px] left-[-65px] bg-black/90 p-2.5 w-[220px] xs:text-[1rem] xs:w-[140px] xs:left-[-30px] xs:top-[30px]">
                   <h1 class="text-center font-semibold">{skill.skillsTitle}</h1>
                   <p class="text-[0.9rem]">{skill.skillsText}</p>
                 </div>
