@@ -8,5 +8,10 @@ module.exports = {
       },
     },
   },
+  variants: {
+    extend: {
+      zIndex: ["group-hover"],
+    },
+  },
   plugins: [],
 };
