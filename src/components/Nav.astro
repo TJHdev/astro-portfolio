@@ -9,6 +9,33 @@ interface Props {
 // const { title, body } = Astro.props;
 ---
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Select all buttons
+    const buttons = document.querySelectorAll("button");
+
+    buttons.forEach((button) => {
+      // Add click event listener to each button
+      button.addEventListener("click", function () {
+        // Get the ID from the button text content
+        const id = button?.textContent?.trim();
+        // Find the element with the matching ID
+        const targetElement = id && document.getElementById(id);
+        if (targetElement) {
+          // Smoothly scroll to the target element
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - 100;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        }
+      });
+    });
+  });
+</script>
+
 <div
   class="flex fixed justify-center items-center w-screen max-w-full z-15 bg-opacity-90 bg-gray-900 mb-14.5 z-50"
 >
@@ -36,5 +63,3 @@ interface Props {
     >
   </div>
 </div>
-
-<style></style>
