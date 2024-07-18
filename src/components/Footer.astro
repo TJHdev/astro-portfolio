@@ -1,0 +1,35 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<div
+  class="flex flex-col justify-center w-screen max-w-full relative bg-black bg-opacity-80"
+>
+  <div class="block text-center">
+    <Icon name="TJHlogo" size={50} class="h-20 mx-auto pt-4" />
+  </div>
+  <div class="flex justify-center py-4">
+    <div class="text-center">
+      <a href="mailto:thomasjhanna@outlook.com" class="inline-block m-4">
+        <Icon name="email" size={50} />
+      </a>
+      <a href="https://github.com/TJHdev" class="inline-block m-4">
+        <Icon name="github" size={50} />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/thomas-hanna-2b946394/"
+        class="inline-block m-4"
+      >
+        <Icon name="linkedin" size={50} />
+      </a>
+      <!-- <a href="https://twitter.com/Tea_JH" class="inline-block m-4">
+        <img src={twitter} alt="Twitter" class="w-10" />
+        <Icon name="linkedin" size={50} />
+      </a> -->
+      <hr class="border-t border-gray-600 my-4" />
+      <p class="mt-1.5 text-lg text-white">
+        All rights reserved Thomas Hanna &#169;
+      </p>
+    </div>
+  </div>
+</div>

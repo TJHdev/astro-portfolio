@@ -10,17 +10,17 @@ import HorizontalRule from "./HorizontalRule.astro";
 const workExperienceData: { title: string; text: string; imgPath: string }[] = [
   {
     title: "Enhance",
-    text: "Senior frontend developer role. Worked on the customer facing product. Heavy focus on code quality and testing.",
+    text: "Worked on improving a complex customer-facing web hosting control panel, implementing new features and improving performance using TypeScript, React, and Redux. Spearheaded key initiatives including migrating to react-query, rewriting enhance.com from WordPress to Astro for better performance, and implementing an extensive end-to-end test suite with Playwright. Developed new frontend features, fixed numerous bugs, and ensured consistency across the app's UI and UX.",
     imgPath: Enhance.src,
   },
   {
     title: "Superbet",
-    text: "Fullstack developer role. The role involved using real time data via websockets to implement internal tools for traders and customer service staff. I progressed quickly from junior to mid level demonstrating aptitude for software development",
+    text: "Led a complete overhaul of an internal back-office web application using React, Material-UI, Redux, and Webpack, and designed reusable components for querying Elasticsearch data. Created a CMS system for managing banners and an online casino, integrated Jest for unit testing, and developed trader limits tool to reduce company liability. Additionally, quickly learned Erlang to develop and deploy microservices to AWS, maintaining MQTT and REST endpoints, and automated various error-prone tasks.",
     imgPath: Superbet.src,
   },
   {
     title: "Web Development",
-    text: "From May 2018, I have been retraining full-time as a web developer. My main target has been to gain a strong grasp of JavaScript, with a secondary goal of becoming familiar with the current JavaScript ecosystem and popular frameworks.",
+    text: "From May 2018, I retrained full-time as a web developer. My main target was to gain a strong grasp of JavaScript, with a secondary goal of becoming familiar with the current JavaScript ecosystem and popular frameworks.",
     imgPath: Webdev.src,
   },
   {
@@ -37,20 +37,23 @@ const workExperienceData: { title: string; text: string; imgPath: string }[] = [
 ---
 
 <>
-  <div class="text-center mb-10 pt-20">
+  <div class="container text-center mb-10 pt-20 mx-auto max-w-[1200px]">
     <!-- <h2 class="text-2xl font-bold">About Me</h2> -->
-    <Header title="Experience" />
-    <div class="flex gap-2">
+    <div class="text-center mb-10 pt-20">
+      <!-- <h2 class="text-2xl font-bold">About Me</h2> -->
+      <Header title="Experience" />
+    </div>
+    <div class="flex gap-1 flex-wrap flex-start justify-center">
       {
         workExperienceData.map(({ imgPath, title, text }) => {
           return (
-            <button class="focus:outline-none flex flex-col align-top w-[200px] col-1-of-4 m-6 bg-black bg-opacity-80 text-white text-2xl text-center rounded-md shadow-lg transition-transform duration-300 ease-in-out hover:scale-110 focus:scale-110 hover:shadow-2xl">
+            <button class="self-start focus:outline-none flex flex-col align-top w-[330px] col-1-of-4 m-6 bg-black bg-opacity-80 text-white text-center rounded-md shadow-lg transition-transform duration-300 ease-in-out hover:scale-110 focus:scale-110 hover:shadow-2xl">
               <img src={imgPath} alt={title} class="w-full" />
-              <h3 class="pt-4 px-8 align-middle">
+              <h3 class="max-w-[220px] mx-auto pt-4 text-center text-lg">
                 {title}
                 <HorizontalRule />
               </h3>
-              <p class="p-5 text-[0.9rem]">{text}</p>
+              <p class="p-5 text-md text-left">{text}</p>
             </button>
           );
         })
